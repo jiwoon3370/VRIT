@@ -1,0 +1,22 @@
+Set-Content -Path .gitignore -Value @"
+# 1. 파이썬 관련 제외
+python/.venv/
+python/__pycache__/
+python/*.task
+python/*.pyc
+
+# 2. 유니티 관련 제외 (임시 파일들)
+unity/[Ll]ibrary/
+unity/[Tt]emp/
+unity/[Oo]bj/
+unity/[Bb]uild/
+unity/[Logs]/
+unity/[UserSettings]/
+*.meta
+
+# 3. 유니티 폴더 안에서 'Scripts' 폴더만 빼고 다 무시하기
+unity/*
+!unity/Assets/
+unity/Assets/*
+!unity/Assets/Scripts/
+"@
